@@ -1,22 +1,22 @@
 #include <stdio.h>
-
+#include <ctype.h>
 /**
- * main - Prints numbers between 0 to 9 with commas and spaces.
- *
- * Return: Always 0 (Success)
- */
+*main - Prints all single digits with , and space followed by new line
+*
+*Return: returns 0
+*/
 int main(void)
 {
-	int i;
+	int digit;
 
-	for (i = 48; i < 58; i++)
+	for (digit = '0'; digit <= '9'; digit++)
 	{
-		putchar(i);
-		if (i != 57)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		putchar(digit);
+		if (digit == '9')
+			continue;
+
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
